@@ -11,5 +11,9 @@ public class Main {
         Warehouse wh2 = new Warehouse();
         wh2.readAll();
         System.out.println(wh2.showInfo());
+        Shop shop1 = new Shop();
+        shop1.readAll();
+        shop1.reCost();
+        System.out.println(shop1.showInfo());
     }
 }

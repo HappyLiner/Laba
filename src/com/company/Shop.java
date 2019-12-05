@@ -10,7 +10,29 @@ public class Shop {
     private ArrayList<Product> products;
     private int cost;
     private int max_weight = 0;
-    
+
+    /**
+     * @return String
+     */
+    public String showInfo() {
+        String s = "";
+        this.reCost();
+        s += "Warehouse name:\"" + this.name + "\" Summary Product's cost:" + this.cost + "\n";
+        int k = 1;
+        for(Product product : this.products){
+            s+= k + ". " + product.getName() + "\n";
+            s+= "Cost:" + product.getCost() + "\n";
+            s+= "Count" + product.getCount() + "\n";
+            k++;
+        }
+        return s;
+    }
+
+    public void reCost(){
+        this.cost = 0;
+        for(Product product: this.products)
+            this.cost += product.getCost() * product.getCount();
+    }
 
     /**
      *
