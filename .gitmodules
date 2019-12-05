@@ -1,0 +1,6 @@
+[submodule "scm4j-vcs-git"]
+	path = scm4j-vcs-git
+	url = https://github.com/scm4j/scm4j-vcs-git.git
+[submodule "Git-library-Java"]
+	path = Git-library-Java
+	url = https://github.com/nayuki/Git-library-Java.git
