@@ -86,6 +86,9 @@ public class Warehouse {
         for(Product product: this.products)
             this.cost += product.getCost() * product.getCount();
     }
+    /**
+     * Is this comment only for pull request?
+     */
     
     /** 
      * @return String
