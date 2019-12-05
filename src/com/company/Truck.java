@@ -18,4 +18,6 @@ public class Truck {
     public void setMax_weight(int max_weight) {
         this.max_weight = max_weight;
     }
+
+
 }

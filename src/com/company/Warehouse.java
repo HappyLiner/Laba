@@ -9,10 +9,11 @@ public class Warehouse {
     private String name;
     private ArrayList<Product> products;
     private int cost;
+    private int max_weight = 0;
 
     
     /** 
-     * @return 
+     * @return nothing
      */
     Warehouse () {
         this.name = "NULL";
@@ -22,7 +23,7 @@ public class Warehouse {
     
     /** 
      * @param name
-     * @return 
+     * @return nothing
      */
     Warehouse (String name) {
         this.name = name;
@@ -43,6 +44,12 @@ public class Warehouse {
         Product product = new Product(m.group(1), Integer.parseInt(m.group(2)), Integer.parseInt(m.group(3)), Integer.parseInt(m.group(4)));
         this.addProduct(product);
     }
+
+    /**
+     *
+     * Reading all products until word "Break"
+     * @return nothing
+     */
     public void readAll(){
         Scanner in = new Scanner(System.in);
         Pattern pattern = Pattern.compile("([a-zA-Z0-9]+); *([0-9]+); *([0-9]+); *([0-9]+) *");
@@ -102,5 +109,16 @@ public class Warehouse {
      */
     public void addProduct(Product product){
         this.products.add(product);
+    }
+
+    public void checkWeight () {
+        int k = 0;
+        for(int i = 0; i < this.products.size(); i++) {
+            k+= this.products.get(i).getWeight() * this.products.get(i).getCount();
+        }
+        if(k <= max_weight)
+            System.out.println("Okay");
+        else
+            System.out.println("ALARM!");
     }
 }

@@ -8,7 +8,12 @@ public class Product {
     private int material;
     private int color;
 
-    Product () {}
+    Product () {
+        this.name = "";
+        this.weight = 0;
+        this.cost = 0;
+        this.count = 0;
+    }
 
     Product (String name, int weight, int cost, int count){
         this.name = name;
@@ -17,6 +22,11 @@ public class Product {
         this.count = count;
     }
 
+    /**
+     *
+     * Setters and Getters
+     *
+     */
     public int getWeight() {
         return weight;
     }
