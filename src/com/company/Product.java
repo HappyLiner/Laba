@@ -5,6 +5,8 @@ public class Product {
     private int weight;
     private int cost;
     private int count;
+    private int material;
+    private int color;
 
     Product () {}
 
@@ -25,6 +27,22 @@ public class Product {
 
     public String getName() {
         return name;
+    }
+
+    public int getMaterial() {
+        return material;
+    }
+
+    public void setMaterial(int material) {
+        this.material = material;
+    }
+
+    public int getColor() {
+        return color;
+    }
+
+    public void setColor(int color) {
+        this.color = color;
     }
 
     public int getCount() {
